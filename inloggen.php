@@ -1,7 +1,7 @@
 <?php 
 require_once 'header.php'; // Haal functies op
 ?>
-        
+       
 <div class="inloggen">
     <h3> U kunt hieronder inloggen</h3>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
