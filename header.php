@@ -11,7 +11,7 @@ if(isset($_POST['inlog'])){ // Check of de gebruiker het formulier gepost hebt
         <meta charset="UTF-8">
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         
-        <title>MP3-Shop</title>
+        <title>Bon Temps</title>
         
         <link rel="stylesheet" href="opmaak.css">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> 

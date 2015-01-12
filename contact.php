@@ -3,7 +3,7 @@
 ?>
 
 <div class='welkom'>
-    <p> Bij vragen of klachten kunt u mailen naar: admin@bontemps.nl<br>
+    <p>	Bij vragen of klachten kunt u mailen naar: admin@bontemps.nl<br>
 			of u belt even naar: 0909 1234567
     </p>
 </div>
