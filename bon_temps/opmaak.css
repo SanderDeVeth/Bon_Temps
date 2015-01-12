@@ -1,0 +1,398 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13-Dec-2014, 15:27:08
+    Author     : Sanne
+*/
+
+/*  text kleur: #F1F4FA
+    achtergrond kleur: #006600
+    hover	kleur: #ADB1BA
+*/
+
+html,
+button,
+input,
+select,
+textarea{
+    color: #F1F4FA;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+input{
+    
+    color: #006600;
+}
+
+#zwart{
+    color:black;
+}
+body{
+    background: #006600;
+}
+
+/*================================== TOPBAR ======================================== */
+
+.topbar{
+    width: 100%;
+    height: 25px;
+    padding-top: 19px;
+    padding-bottom:19px;
+    background-color:#00CC00;
+    
+}
+.topbar img{
+    margin-left:5px;
+}
+.topbar a{
+    color: #F1F4FA;
+    margin:16px;
+    text-decoration:none;
+    font-size: 19px;
+    
+}
+.topbar .left{
+    float: left;
+}
+.topbar a:hover{
+    color: #ADB1BA;
+    
+}
+.topbar .right{
+    float: right;
+}
+
+/* ================================= home =============================== */
+
+/*
+.thuisbasis{
+    width: 80%;
+    margin-left:  auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+*/
+
+.welkom{
+    width:80%;
+    margin: 0 auto;
+    padding-top:30px;  
+}
+.welkom h3{
+    font-size:20px;
+    margin: 0 auto;    
+}
+.welkom p{
+    font-size: 14px;
+}
+.welkom a{
+    color: #F1F4FA;
+    text-decoration:none;
+    font-size: 16px;
+}
+
+.welkom a:hover{
+        color: #ADB1BA;
+}
+
+.evenementen{
+    width: 90%;
+    margin: 0 auto; 
+    padding-top: 30px;
+}
+
+.evenementen #placeholder-artist{
+    float: left;  
+    margin: 20px;
+    border-radius:20px;
+    width:149px;
+    height: 153px;
+}
+
+.evenementen h2{
+    color: #F1F4FA;
+    margin: 10px;
+}
+
+.evenementen h2 span{
+    color: #CEACFF;
+    font-size: 30px;   
+}
+
+
+.evenementen .bestel{
+    color: #F1F4FA;
+    text-decoration:none;
+}
+
+.evenementen .bestel:hover{
+    color: #ADB1BA;
+}
+
+
+.evenementen p{
+    padding-right:125px;
+    margin-top:0px;
+    margin-left: 50px;
+    font-size:15px;
+}
+
+/*=========================== inloggen ============================= */
+
+.inloggen{
+    width:20%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.inloggen input{
+    color: #4B5367;
+    clear: both;
+    display: block;
+    margin:5px;
+    width: 99%;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.registreren input[type=submit]{
+    width: 50%;
+    margin-top: 20px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #ADB1BA;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ADB1BA;
+	box-shadow:inset 0px 1px 0px 0px #ADB1BA;
+	background-color:transparent;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #877c87;
+	display:inline-block;
+	cursor:pointer;
+	color: #F1F4FA;
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:15px;
+	padding:6px 24px;
+	text-decoration:none;
+}
+.registreren input[type=submit]:hover{
+	background-color:transparent;
+}
+
+.registreren input[type=submit]:active{
+	position:relative;
+}
+
+.inloggen input[type=submit]{
+    width: 50%;
+    margin-top: 20px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #ADB1BA;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ADB1BA;
+	box-shadow:inset 0px 1px 0px 0px #ADB1BA;
+	background-color:transparent;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #877c87;
+	display:inline-block;
+	cursor:pointer;
+	color: #F1F4FA;
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:15px;
+	padding:6px 24px;
+	text-decoration:none;
+}
+
+.inloggen input[type=submit]:hover{
+	background-color:transparent;
+}
+
+.inloggen input[type=submit]:active{
+	position:relative;
+}
+.link{
+
+    color: #CEACFF;
+    text-decoration: none;
+    margin:0 auto;
+    display:block;
+}
+.link a:hover{
+    color:#ADB1BA;
+}
+
+/*======================================registreren===========================================*/
+
+.registreren{
+    width:60%;
+    margin: 0 auto;
+    padding-top:30px;
+}
+
+.registreren input{
+    color: #4B5367;
+    padding-right: 200px;
+    
+}
+
+.registreren br{
+    margin-bottom:20px;
+}
+
+.registreren fieldset{
+    
+    border-style: solid;
+    border-color: #CEACFF;
+}
+
+
+/*=======================================INGELOGD====================================*/
+
+.ingelogd{
+    width:50%;
+    margin: 0 auto;
+    padding-top:30px;
+}
+
+/*======================================BESTEL OVERZICHt===============================*/
+
+.genreselect{
+    width:80%;
+    margin: 0 auto;
+    padding-top:30px;
+
+}
+
+.genreselect h3{
+    font-size:20px;
+    margin: 0 auto;
+    padding-bottom:10px;
+    
+}
+
+.genreselect p{
+    font-size: 14px;
+}
+.registreren input{
+    color: #4B5367;
+    padding-right: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    
+}
+
+.registreren br{
+    margin-bottom:20px;
+}
+
+.registreren fieldset{
+    
+    border-style: solid;
+    border-color: #CEACFF;
+}
+.genreselect input[type=submit]{
+    width: 20px;
+    margin-top: 15px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #ADB1BA;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ADB1BA;
+	box-shadow:inset 0px 1px 0px 0px #ADB1BA;
+	background-color:transparent;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #877c87;
+	display:inline-block;
+	cursor:pointer;
+	color: #F1F4FA;
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:15px;
+	padding:6px 24px;
+	text-decoration:none;
+}
+
+.genreselect input[type=submit]:hover{
+	background-color:transparent;
+}
+
+.genreselect input[type=submit]:active{
+	position:relative;
+}
+
+/*
+.genremenu{
+    color: #F1F4FA;
+    font-family:"Arial Black", Gadget, sans-serif;
+    font-size:15px;
+    margin-right:100px;
+}
+*/
+
+.tabel{
+    width:80%;
+    margin: 0 auto;
+    padding-top:30px;
+}
+.tabel #placeholder{
+    margin-left: 35px;
+    margin-bottom: 25px;
+    border-radius:20px;
+    width:100px;
+    height: 100px;
+}
+
+.tabel h2{
+    color: #F1F4FA;
+    font-size:18px;
+}
+
+.tabel h2 span{
+    color: #CEACFF;
+    font-size: 20px;   
+}
+.tabel h2 a{
+    color: #F1F4FA;
+    text-decoration:none;
+}
+.tabel h2 a:hover{
+    color:#ADB1BA;
+}
+.tabel td{
+    width:150px;
+    border-bottom: 1px solid #646e89;
+}
+.tabel tr{
+    width:900px;       
+}
+
+.tabel1{
+    margin: 0 auto;
+    padding-top:30px;
+}
+
+.tabel1 h2{
+    color: #F1F4FA;
+    font-size:18px;
+}
+
+.tabel1 h2 span{
+    color: #CEACFF;
+    font-size: 20px;   
+}
+.tabel1 h2 a{
+    color: #F1F4FA;
+    text-decoration:none;
+}
+.tabel1 h2 a:hover{
+    color:#ADB1BA;
+}
+.tabel1 td{
+    width:150px;
+    border-bottom: 1px solid #646e89;
+}
+.tabel1 tr{
+    width:450px;       
+}
