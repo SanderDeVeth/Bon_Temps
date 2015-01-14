@@ -7,31 +7,31 @@
 	}
 	 
 	// product en id naam
-	$albumcode = isset($_GET['albumcode']) ? $_GET['albumcode'] : "";
-	$genre = isset($_GET['genre']) ? $_GET['genre'] : "";
-	$albumtitel = isset($_GET['albumtitel']) ? $_GET['albumtitel'] : "";
+	$menucode = isset($_GET['menucode']) ? $_GET['menucode'] : "";
+	$type = isset($_GET['type']) ? $_GET['type'] : "";
+	$menutitel = isset($_GET['menutitel']) ? $_GET['menutitel'] : "";
 	$prijs = isset($_GET['prijs']) ? $_GET['prijs'] : "";
 
-	$albumbestaat = false;
-	foreach($cart_items as $albumID => $album){
-		if($album['albumcode'] == $albumcode){
-			$cart_items[$albumID]['aantal'] ++;
-			$albumbestaat = true;
+	$menubestaat = false;
+	foreach($cart_items as $menuID => $menu){
+		if($menu['menucode'] == $menucode){
+			$cart_items[$menuID]['aantal'] ++;
+			$menubestaat = true;
 		}
 	}
 		
-	if(!$albumbestaat){
-		 $addalbum = array(
+	if(!$menubestaat){
+		 $addmenu = array(
 			"prijs" => $prijs,
-			"albumcode" => $albumcode,
-			"albumtitel" => $albumtitel,
+			"menucode" => $menucode,
+			"menutitel" => $menutitel,
 			"aantal" => "1"
 		 );
-		array_push($cart_items, $addalbum);
+		array_push($cart_items, $addmenu);
 	}
 	// nieuw item bij array
 
 	setcookie('cart_items', serialize($cart_items));
 	//echo $_COOKIE['cart_items'];
-	header('Location: bestel.php?genre=' . $genre . '&action=added&albumcode' . $albumcode . '&albumtitel=' . $albumtitel . '&prijs=' . $prijs);
+	header('Location: bestel.php?type=' . $type . '&action=added&menucode' . $menucode . '&menutitel=' . $menutitel . '&prijs=' . $prijs);
 ?>

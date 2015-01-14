@@ -140,7 +140,7 @@ function laadpagina(){
     }
     else{
         echo "<a href='inloggen.php'>Inloggen</a>";
-    }  
+    }
 }
 
 //================================================= Bestelpagina ================================================= //
@@ -166,9 +166,17 @@ function bestelpagina(){
         echo"<table class=tabel>";
         echo"<tr>";
         echo"<td><h2>" . $row['id'] . "</h2></td>";
-        echo"<td><h2>" . $row['beschrijving'] . "</h2></td>";
+        echo"<td><h2>" . $row['menutitel'] . "</h2></td>";
         echo"<td><h2>&euro;" . $row['prijs'] . "</h2></td>";
-        
+		echo"<td><h2>AANTAL</td></h2>";
+		
+		echo'<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+					<input type="text" name="email" placeholder="Uw e-mail..." autofocus>
+					<input type="password" name="wachtwoord" placeholder="Uw wachtwoord...">
+					<input type="submit" name="inlog" value="Inloggen"><br>
+					<a class="link" href="registreren.php">Nog geen account?</a>
+				</form>';
+		
         echo "<td><h2><a href='add_to_cart.php?menucode=" . $row['menucode'] . "&menutitel=" . $row['menutitel'] . "&prijs=" . $row['prijs'] . "&id=" . $row['id'] . "'>Plaats in winkelwagen</a></h2></td>";
         echo"</tr>";
     }

@@ -2,7 +2,7 @@
 require_once 'header.php'; // Haal functies op
 ?>
 
-<div class="albumlijst">
+<div class="menulijst">
     <?php bestelpagina(); ?>
 </div>
 
