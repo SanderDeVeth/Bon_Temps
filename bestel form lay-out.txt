@@ -1,0 +1,7 @@
+Naam				.
+Email				.
+Tijd					.
+Aantal gasten	.
+Menu 1(prijs)		.
+Menu 2(prijs)		.
+Menu 3(prijs)		.

@@ -80,7 +80,7 @@ function registreren(){
 	}
 }
 
-function printname(){	
+function printname(){
 	if(isset($_COOKIE['user'])){
 		echo '<b>' . $_COOKIE['user'] . '</b>' . "&nbsp; &nbsp; &nbsp;";
 		//echo '<a href="inloggen.php?uitloggen=yes" style="font-size: 12px;">(uitloggen)</a>';             
@@ -91,10 +91,10 @@ function printname(){
 }
 
 function logout(){
-    setcookie('user','',time()-3600);
-    setcookie('userid','',time()-3600);
-    setcookie('cart_items', '',time()-3600);
-    header( 'Location: index.php' ) ;
+    setcookie('user', '', time()-3600);
+    setcookie('userid', '', time()-3600);
+    setcookie('cart_items', '', time()-3600);
+    header( 'Location: index.php' );
 }
 
 function checkout(){
@@ -113,13 +113,12 @@ function checkout(){
 													VALUES (NULL , '$bestelling_id', '$menu[menucode]', '$menu[aantal]')");
         mysql_query($query) or die("A MySQL error has occurred.<br />Your Query: " . $query . "<br /> Error: (" . mysql_errno() . ") " . mysql_error());
    }
-    
-    setcookie('cart_items', '',time()-3600); 
+    setcookie('cart_items', '', time()-3600);
     header('Location: betaald.php');
 }
 
 function geleegd(){
-    setcookie('cart_items', '',time()-3600);
+    setcookie('cart_items', '', time()-3600);
 }
 
 function laadpagina(){
@@ -146,8 +145,12 @@ function laadpagina(){
 //================================================= Bestelpagina ================================================= //
 
 function bestelpagina(){
-    $query = "SELECT * FROM menu";
-
+    $verbinding = mysql_connect("localhost", "root", "") or die (mysql_error() . "Kon geen verbinding maken");
+    mysql_select_db("bon_temps") or die(mysql_error() . "Kon geen database selecteren");
+    
+	$query = "SELECT * FROM menu";
+	$resultaatB = mysql_query($query) or die (mysql_error());
+	
         if (isset($_POST["id"])){
             $id = $_POST["id"];
             header("location: bestel.php?id= $");
@@ -156,29 +159,33 @@ function bestelpagina(){
         if(isset($_GET["id"])){
             $query ="SELECT * FROM menu WHERE id='". $_GET['id']."'";
         }
-
-    $verbinding = mysql_connect("localhost", "root", "") or die ("Kon geen verbinding maken");
-    mysql_select_db("bon_temps") or die("Kon geen database selecteren");
-    $resultaatB = mysql_query($query) or die (mysql_error());
-		
+	
 //========================================================== Tabel ============================================= //
     while($row= mysql_fetch_array($resultaatB, MYSQL_ASSOC)){
-        echo"<table class=tabel>";
-        echo"<tr>";
-        echo"<td><h2>" . $row['id'] . "</h2></td>";
-        echo"<td><h2>" . $row['menutitel'] . "</h2></td>";
-        echo"<td><h2>&euro;" . $row['prijs'] . "</h2></td>";
-		echo"<td><h2>AANTAL</td></h2>";
 		
-		echo'<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-					<input type="text" name="email" placeholder="Uw e-mail..." autofocus>
-					<input type="password" name="wachtwoord" placeholder="Uw wachtwoord...">
-					<input type="submit" name="inlog" value="Inloggen"><br>
-					<a class="link" href="registreren.php">Nog geen account?</a>
-				</form>';
+		/*
+		echo	"<table class=tabel>";
+        echo	"<tr>";
+        echo	"<td><h2>" . $row['id'] . "</h2></td>";
+        echo	"<td><h2>" . $row['menutitel'] . "</h2></td>";
+        echo	"<td><h2>&euro;" . $row['prijs'] . "</h2></td>";
+		echo "<td><h2><a href='add_to_cart.php?menucode=" . $row['menucode'] . "&menutitel=" . $row['menutitel'] . "&prijs=" . $row['prijs'] . "&id=" . $row['id'] . "'>Plaats in winkelwagen</a></h2></td>";
+        echo	"</tr>";
+		echo "</table>";
+		*/
 		
-        echo "<td><h2><a href='add_to_cart.php?menucode=" . $row['menucode'] . "&menutitel=" . $row['menutitel'] . "&prijs=" . $row['prijs'] . "&id=" . $row['id'] . "'>Plaats in winkelwagen</a></h2></td>";
-        echo"</tr>";
+		/*
+		echo "<form action='add_to_cart.php' method='post'>";
+		echo	"<table class=tabel>";
+        echo	"<tr>";
+        echo	"<td><h2>" . $row['id'] . "</h2></td>";
+        echo	"<td><h2>" . $row['menutitel'] . "</h2></td>";
+        echo	"<td><h2>&euro;" . $row['prijs'] . "</h2></td>";
+		echo "<td><h2><a href='add_to_cart.php?menucode=" . $row['menucode'] . "&menutitel=" . $row['menutitel'] . "&prijs=" . $row['prijs'] . "&id=" . $row['id'] . "'>Plaats in winkelwagen</a></h2></td>";
+        echo	"</tr>";
+		echo "</table>";
+		echo "</form>";
+		*/
     }
 }
 ?>

@@ -5,7 +5,7 @@
 	else {
 		$cart_items = array();
 	}
-	 
+	
 	// product en id naam
 	$menucode = isset($_GET['menucode']) ? $_GET['menucode'] : "";
 	$type = isset($_GET['type']) ? $_GET['type'] : "";
@@ -13,12 +13,12 @@
 	$prijs = isset($_GET['prijs']) ? $_GET['prijs'] : "";
 
 	$menubestaat = false;
-	foreach($cart_items as $menuID => $menu){
-		if($menu['menucode'] == $menucode){
-			$cart_items[$menuID]['aantal'] ++;
-			$menubestaat = true;
+		foreach($cart_items as $menuID => $menu){
+			if($menu['menucode'] == $menucode){
+				$cart_items[$menuID]['aantal']++;
+				$menubestaat = true;
+			}
 		}
-	}
 		
 	if(!$menubestaat){
 		 $addmenu = array(
